@@ -81,3 +81,76 @@ footer {
   font-size: 13px;
   border-top: 1px solid #222;
 }
+
+/* FADE + SLIDE al cargar la página */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica la animación al hero */
+#hero {
+  animation: fadeUp 0.8s ease both;
+}
+
+#hero p {
+  animation: fadeUp 0.8s ease 0.2s both; /* 0.2s de delay */
+}
+
+/* CURSOR parpadeante — efecto terminal */
+#hero h1::after {
+  content: '_';
+  color: var(--acento);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: var(--acento);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 3px 8px;
+  background: rgba(0,245,196,0.1);
+  color: var(--acento);
+  border-radius: 3px;
+  margin-right: 6px;
+  font-family: monospace;
+}

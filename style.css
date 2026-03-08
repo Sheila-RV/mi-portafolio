@@ -1,0 +1,83 @@
+/* VARIABLES — colores y fuentes en un solo lugar */
+:root {
+    --fondo: #0a0a0a;
+    --texto: #f0f0f0;
+    --acento: #ec8cf3;
+    --muted: #888;
+}
+
+/* RESET — elimina márgenes raros del browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* NAVEGACIÓN */
+header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--acento);
+}
+
+/* SECCIONES — espacio generoso */
+section {
+  padding: 80px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* HERO */
+#hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+#hero h1 span {
+  color: var(--acento);
+}
+
+#hero p {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* TÍTULOS DE SECCIÓN */
+h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--acento);
+  padding-left: 16px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid #222;
+}
